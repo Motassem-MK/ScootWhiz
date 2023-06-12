@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/html/app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=10.1.1" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=10.1.1" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=10.1.1" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/var/www/html/app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Client/Repository/Eloquent/Model/Client.php.html#16">App\Client\Repository\Eloquent\Model\Client</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#7">App\Http\Middleware\TrustHosts</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#8">App\Providers\BroadcastServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/Model/Scooter.php.html#22">App\Scooter\Repository\Eloquent\Model\Scooter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ScooterLocation/Repository/Eloquent/Model/ScooterLocation.php.html#25">App\ScooterLocation\Repository\Eloquent\Model\ScooterLocation</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/RouteServiceProvider.php.html#10">App\Providers\RouteServiceProvider</a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="Client/Model/Client.php.html#7">App\Client\Model\Client</a></td><td class="text-right">40%</td></tr>
+       <tr><td><a href="ScooterLocation/Model/ScooterLocation.php.html#11">App\ScooterLocation\Model\ScooterLocation</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLatitude.php.html#11">App\ScooterLocation\Rule\ValidLatitude</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLongitude.php.html#11">App\ScooterLocation\Rule\ValidLongitude</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Trip/Model/Trip.php.html#11">App\Trip\Model\Trip</a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="Location/Dto/Coordinates.php.html#9">App\Location\Dto\Coordinates</a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/EndTripController.php.html#20">App\Http\Controllers\Scooter\Trip\EndTripController</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="Location/Dto/Coordinate.php.html#9">App\Location\Dto\Coordinate</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/BeginTripController.php.html#22">App\Http\Controllers\Scooter\Trip\BeginTripController</a></td><td class="text-right">68%</td></tr>
+       <tr><td><a href="Client/Repository/Eloquent/ClientRepository.php.html#13">App\Client\Repository\Eloquent\ClientRepository</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Http/Middleware/ApiKeyMiddleware.php.html#12">App\Http\Middleware\ApiKeyMiddleware</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/ScooterRepository.php.html#20">App\Scooter\Repository\Eloquent\ScooterRepository</a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="Scooter/Model/Scooter.php.html#12">App\Scooter\Model\Scooter</a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/BeginTripController.php.html#22">App\Http\Controllers\Scooter\Trip\BeginTripController</a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/EndTripController.php.html#20">App\Http\Controllers\Scooter\Trip\EndTripController</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLatitude.php.html#11">App\ScooterLocation\Rule\ValidLatitude</a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLongitude.php.html#11">App\ScooterLocation\Rule\ValidLongitude</a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Http/Middleware/ApiKeyMiddleware.php.html#12">App\Http\Middleware\ApiKeyMiddleware</a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Client/Model/Client.php.html#13"><abbr title="App\Client\Model\Client::fromArray">fromArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Client/Repository/Eloquent/ClientRepository.php.html#32"><abbr title="App\Client\Repository\Eloquent\ClientRepository::deleteManyByUuid">deleteManyByUuid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Client/Repository/Eloquent/Model/Client.php.html#31"><abbr title="App\Client\Repository\Eloquent\Model\Client::trips">trips</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#14"><abbr title="App\Http\Middleware\TrustHosts::hosts">hosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Location/Dto/Coordinate.php.html#15"><abbr title="App\Location\Dto\Coordinate::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Location/Dto/Coordinates.php.html#17"><abbr title="App\Location\Dto\Coordinates::fromArray">fromArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#13"><abbr title="App\Providers\BroadcastServiceProvider::boot">boot</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Model/Scooter.php.html#52"><abbr title="App\Scooter\Model\Scooter::setCoordinates">setCoordinates</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/Model/Scooter.php.html#44"><abbr title="App\Scooter\Repository\Eloquent\Model\Scooter::trips">trips</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/Model/Scooter.php.html#49"><abbr title="App\Scooter\Repository\Eloquent\Model\Scooter::locationHistory">locationHistory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/Model/Scooter.php.html#54"><abbr title="App\Scooter\Repository\Eloquent\Model\Scooter::currentLocation">currentLocation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/ScooterRepository.php.html#33"><abbr title="App\Scooter\Repository\Eloquent\ScooterRepository::findByUuid">findByUuid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/ScooterRepository.php.html#40"><abbr title="App\Scooter\Repository\Eloquent\ScooterRepository::findManyByUuid">findManyByUuid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/ScooterRepository.php.html#111"><abbr title="App\Scooter\Repository\Eloquent\ScooterRepository::deleteManyByUuid">deleteManyByUuid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ScooterLocation/Model/ScooterLocation.php.html#21"><abbr title="App\ScooterLocation\Model\ScooterLocation::fromArray">fromArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ScooterLocation/Repository/Eloquent/Model/ScooterLocation.php.html#51"><abbr title="App\ScooterLocation\Repository\Eloquent\Model\ScooterLocation::scooter">scooter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ScooterLocation/Repository/Eloquent/Model/ScooterLocation.php.html#56"><abbr title="App\ScooterLocation\Repository\Eloquent\Model\ScooterLocation::trip">trip</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Trip/Model/Trip.php.html#22"><abbr title="App\Trip\Model\Trip::fromArray">fromArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/RouteServiceProvider.php.html#12"><abbr title="App\Providers\RouteServiceProvider::boot">boot</abbr></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLatitude.php.html#16"><abbr title="App\ScooterLocation\Rule\ValidLatitude::validate">validate</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLongitude.php.html#16"><abbr title="App\ScooterLocation\Rule\ValidLongitude::validate">validate</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/EndTripController.php.html#28"><abbr title="App\Http\Controllers\Scooter\Trip\EndTripController::__invoke">__invoke</abbr></a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/BeginTripController.php.html#31"><abbr title="App\Http\Controllers\Scooter\Trip\BeginTripController::__invoke">__invoke</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Scooter/Repository/Eloquent/ScooterRepository.php.html#93"><abbr title="App\Scooter\Repository\Eloquent\ScooterRepository::findEloquentModelByUuid">findEloquentModelByUuid</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Http/Middleware/ApiKeyMiddleware.php.html#14"><abbr title="App\Http\Middleware\ApiKeyMiddleware::handle">handle</abbr></a></td><td class="text-right">75%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/BeginTripController.php.html#31"><abbr title="App\Http\Controllers\Scooter\Trip\BeginTripController::__invoke">__invoke</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Http/Controllers/Scooter/Trip/EndTripController.php.html#28"><abbr title="App\Http\Controllers\Scooter\Trip\EndTripController::__invoke">__invoke</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLatitude.php.html#16"><abbr title="App\ScooterLocation\Rule\ValidLatitude::validate">validate</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="ScooterLocation/Rule/ValidLongitude.php.html#16"><abbr title="App\ScooterLocation\Rule\ValidLongitude::validate">validate</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Http/Middleware/ApiKeyMiddleware.php.html#14"><abbr title="App\Http\Middleware\ApiKeyMiddleware::handle">handle</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 10.1.1</a> using <a href="https://www.php.net/" target="_top">PHP 8.2.5</a> and <a href="https://phpunit.de/">PHPUnit 10.1.2</a> at Wed May 10 2:10:57 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=10.1.1" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=10.1.1" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=10.1.1" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,0,0,1,0,1,6,2,3,1,0,58], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([18,0,0,1,0,0,3,2,1,0,0,131], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,0,"<a href=\"Client\/Exception\/ClientNotFound.php.html#9\">App\\Client\\Exception\\ClientNotFound<\/a>"],[40,3,"<a href=\"Client\/Model\/Client.php.html#7\">App\\Client\\Model\\Client<\/a>"],[100,1,"<a href=\"Client\/Repository\/Eloquent\/Builder\/EloquentToClientModelBuilder.php.html#10\">App\\Client\\Repository\\Eloquent\\Builder\\EloquentToClientModelBuilder<\/a>"],[75,3,"<a href=\"Client\/Repository\/Eloquent\/ClientRepository.php.html#13\">App\\Client\\Repository\\Eloquent\\ClientRepository<\/a>"],[0,1,"<a href=\"Client\/Repository\/Eloquent\/Model\/Client.php.html#16\">App\\Client\\Repository\\Eloquent\\Model\\Client<\/a>"],[100,1,"<a href=\"Console\/Kernel.php.html#8\">App\\Console\\Kernel<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#8\">App\\Exceptions\\Handler<\/a>"],[100,0,"<a href=\"Http\/Controllers\/Controller.php.html#12\">App\\Http\\Controllers\\Controller<\/a>"],[100,3,"<a href=\"Http\/Controllers\/Mobile\/ScootersListingController.php.html#15\">App\\Http\\Controllers\\Mobile\\ScootersListingController<\/a>"],[68.18181818181817,6,"<a href=\"Http\/Controllers\/Scooter\/Trip\/BeginTripController.php.html#22\">App\\Http\\Controllers\\Scooter\\Trip\\BeginTripController<\/a>"],[57.14285714285714,5,"<a href=\"Http\/Controllers\/Scooter\/Trip\/EndTripController.php.html#20\">App\\Http\\Controllers\\Scooter\\Trip\\EndTripController<\/a>"],[100,3,"<a href=\"Http\/Controllers\/Scooter\/Trip\/UpdateTripController.php.html#17\">App\\Http\\Controllers\\Scooter\\Trip\\UpdateTripController<\/a>"],[100,0,"<a href=\"Http\/Kernel.php.html#8\">App\\Http\\Kernel<\/a>"],[75,2,"<a href=\"Http\/Middleware\/ApiKeyMiddleware.php.html#12\">App\\Http\\Middleware\\ApiKeyMiddleware<\/a>"],[100,0,"<a href=\"Http\/Middleware\/PreventRequestsDuringMaintenance.php.html#7\">App\\Http\\Middleware\\PreventRequestsDuringMaintenance<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrimStrings.php.html#7\">App\\Http\\Middleware\\TrimStrings<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#7\">App\\Http\\Middleware\\TrustHosts<\/a>"],[100,0,"<a href=\"Http\/Middleware\/ValidateSignature.php.html#7\">App\\Http\\Middleware\\ValidateSignature<\/a>"],[100,0,"<a href=\"Http\/Middleware\/VerifyCsrfToken.php.html#7\">App\\Http\\Middleware\\VerifyCsrfToken<\/a>"],[100,5,"<a href=\"Http\/Request\/Mobile\/ListScootersRequest.php.html#16\">App\\Http\\Request\\Mobile\\ListScootersRequest<\/a>"],[100,4,"<a href=\"Http\/Request\/Scooter\/Trip\/BeginTripRequest.php.html#13\">App\\Http\\Request\\Scooter\\Trip\\BeginTripRequest<\/a>"],[100,3,"<a href=\"Http\/Request\/Scooter\/Trip\/EndTripRequest.php.html#13\">App\\Http\\Request\\Scooter\\Trip\\EndTripRequest<\/a>"],[100,3,"<a href=\"Http\/Request\/Scooter\/Trip\/UpdateTripRequest.php.html#13\">App\\Http\\Request\\Scooter\\Trip\\UpdateTripRequest<\/a>"],[100,1,"<a href=\"Http\/Resources\/ScooterResource.php.html#14\">App\\Http\\Resources\\ScooterResource<\/a>"],[66.66666666666666,3,"<a href=\"Location\/Dto\/Coordinate.php.html#9\">App\\Location\\Dto\\Coordinate<\/a>"],[55.55555555555556,3,"<a href=\"Location\/Dto\/Coordinates.php.html#9\">App\\Location\\Dto\\Coordinates<\/a>"],[100,1,"<a href=\"Location\/Dto\/LocationBounds.php.html#7\">App\\Location\\Dto\\LocationBounds<\/a>"],[100,1,"<a href=\"Location\/Dto\/RectangleCoordinates.php.html#7\">App\\Location\\Dto\\RectangleCoordinates<\/a>"],[100,1,"<a href=\"Location\/Resolver\/BoundingCoordinatesResolver.php.html#10\">App\\Location\\Resolver\\BoundingCoordinatesResolver<\/a>"],[100,2,"<a href=\"Providers\/AppServiceProvider.php.html#8\">App\\Providers\\AppServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#8\">App\\Providers\\AuthServiceProvider<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#8\">App\\Providers\\BroadcastServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/Client\/ClientRepositoryProvider.php.html#11\">App\\Providers\\Client\\ClientRepositoryProvider<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#21\">App\\Providers\\EventServiceProvider<\/a>"],[25,1,"<a href=\"Providers\/RouteServiceProvider.php.html#10\">App\\Providers\\RouteServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/Scooter\/ScooterListenersProvider.php.html#11\">App\\Providers\\Scooter\\ScooterListenersProvider<\/a>"],[100,1,"<a href=\"Providers\/Scooter\/ScooterRepositoryProvider.php.html#11\">App\\Providers\\Scooter\\ScooterRepositoryProvider<\/a>"],[100,1,"<a href=\"Providers\/Scooter\/ScooterStateValidatorsProvider.php.html#12\">App\\Providers\\Scooter\\ScooterStateValidatorsProvider<\/a>"],[100,1,"<a href=\"Providers\/ScooterLocation\/ScooterLocationRepositoryProvider.php.html#11\">App\\Providers\\ScooterLocation\\ScooterLocationRepositoryProvider<\/a>"],[100,1,"<a href=\"Providers\/Trip\/TripRepositoryProvider.php.html#11\">App\\Providers\\Trip\\TripRepositoryProvider<\/a>"],[100,0,"<a href=\"Scooter\/Exception\/ScooterNotFound.php.html#9\">App\\Scooter\\Exception\\ScooterNotFound<\/a>"],[100,2,"<a href=\"Scooter\/Listener\/CheckReadinessToStart.php.html#10\">App\\Scooter\\Listener\\CheckReadinessToStart<\/a>"],[100,2,"<a href=\"Scooter\/Listener\/CheckReadinessToStop.php.html#10\">App\\Scooter\\Listener\\CheckReadinessToStop<\/a>"],[100,2,"<a href=\"Scooter\/Listener\/MarkScooterAsAvailable.php.html#11\">App\\Scooter\\Listener\\MarkScooterAsAvailable<\/a>"],[100,2,"<a href=\"Scooter\/Listener\/MarkScooterAsOccupied.php.html#11\">App\\Scooter\\Listener\\MarkScooterAsOccupied<\/a>"],[88.88888888888889,8,"<a href=\"Scooter\/Model\/Scooter.php.html#12\">App\\Scooter\\Model\\Scooter<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/EloquentToScooterModelBuilder.php.html#11\">App\\Scooter\\Repository\\Eloquent\\Builder\\EloquentToScooterModelBuilder<\/a>"],[100,3,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/MultipleEloquentModelToScooterBuilder.php.html#10\">App\\Scooter\\Repository\\Eloquent\\Builder\\MultipleEloquentModelToScooterBuilder<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/ScooterToEloquentModelBuilder.php.html#10\">App\\Scooter\\Repository\\Eloquent\\Builder\\ScooterToEloquentModelBuilder<\/a>"],[0,3,"<a href=\"Scooter\/Repository\/Eloquent\/Model\/Scooter.php.html#22\">App\\Scooter\\Repository\\Eloquent\\Model\\Scooter<\/a>"],[76.92307692307693,10,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#20\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository<\/a>"],[100,0,"<a href=\"Scooter\/State\/Validator\/Exception\/ScooterStateChangeException.php.html#9\">App\\Scooter\\State\\Validator\\Exception\\ScooterStateChangeException<\/a>"],[100,2,"<a href=\"Scooter\/State\/Validator\/IsAvailableValidator.php.html#11\">App\\Scooter\\State\\Validator\\IsAvailableValidator<\/a>"],[100,2,"<a href=\"Scooter\/State\/Validator\/IsOccupiedValidator.php.html#11\">App\\Scooter\\State\\Validator\\IsOccupiedValidator<\/a>"],[100,3,"<a href=\"Scooter\/State\/Validator\/StateChangeValidationManager.php.html#9\">App\\Scooter\\State\\Validator\\StateChangeValidationManager<\/a>"],[100,2,"<a href=\"ScooterLocation\/Listener\/CreateScooterLocation.php.html#12\">App\\ScooterLocation\\Listener\\CreateScooterLocation<\/a>"],[50,7,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#11\">App\\ScooterLocation\\Model\\ScooterLocation<\/a>"],[100,1,"<a href=\"ScooterLocation\/Repository\/Eloquent\/Builder\/ScooterLocationToEloquentModelBuilder.php.html#10\">App\\ScooterLocation\\Repository\\Eloquent\\Builder\\ScooterLocationToEloquentModelBuilder<\/a>"],[0,2,"<a href=\"ScooterLocation\/Repository\/Eloquent\/Model\/ScooterLocation.php.html#25\">App\\ScooterLocation\\Repository\\Eloquent\\Model\\ScooterLocation<\/a>"],[100,2,"<a href=\"ScooterLocation\/Repository\/Eloquent\/ScooterLocationRepository.php.html#11\">App\\ScooterLocation\\Repository\\Eloquent\\ScooterLocationRepository<\/a>"],[50,2,"<a href=\"ScooterLocation\/Rule\/ValidLatitude.php.html#11\">App\\ScooterLocation\\Rule\\ValidLatitude<\/a>"],[50,2,"<a href=\"ScooterLocation\/Rule\/ValidLongitude.php.html#11\">App\\ScooterLocation\\Rule\\ValidLongitude<\/a>"],[100,4,"<a href=\"Trip\/Event\/TripEnded.php.html#12\">App\\Trip\\Event\\TripEnded<\/a>"],[100,5,"<a href=\"Trip\/Event\/TripEnding.php.html#13\">App\\Trip\\Event\\TripEnding<\/a>"],[100,4,"<a href=\"Trip\/Event\/TripStarted.php.html#12\">App\\Trip\\Event\\TripStarted<\/a>"],[100,5,"<a href=\"Trip\/Event\/TripStarting.php.html#13\">App\\Trip\\Event\\TripStarting<\/a>"],[100,4,"<a href=\"Trip\/Event\/TripUpdated.php.html#12\">App\\Trip\\Event\\TripUpdated<\/a>"],[100,0,"<a href=\"Trip\/Exception\/OngoingTripNotFound.php.html#9\">App\\Trip\\Exception\\OngoingTripNotFound<\/a>"],[100,0,"<a href=\"Trip\/Exception\/TripNotFound.php.html#9\">App\\Trip\\Exception\\TripNotFound<\/a>"],[100,2,"<a href=\"Trip\/Listener\/EndTrip.php.html#11\">App\\Trip\\Listener\\EndTrip<\/a>"],[100,2,"<a href=\"Trip\/Listener\/StartTrip.php.html#12\">App\\Trip\\Listener\\StartTrip<\/a>"],[53.333333333333336,9,"<a href=\"Trip\/Model\/Trip.php.html#11\">App\\Trip\\Model\\Trip<\/a>"],[100,2,"<a href=\"Trip\/Repository\/Eloquent\/Builder\/EloquentToTripModelBuilder.php.html#12\">App\\Trip\\Repository\\Eloquent\\Builder\\EloquentToTripModelBuilder<\/a>"],[100,2,"<a href=\"Trip\/Repository\/Eloquent\/Builder\/TripToEloquentModelBuilder.php.html#10\">App\\Trip\\Repository\\Eloquent\\Builder\\TripToEloquentModelBuilder<\/a>"],[100,2,"<a href=\"Trip\/Repository\/Eloquent\/Model\/Trip.php.html#22\">App\\Trip\\Repository\\Eloquent\\Model\\Trip<\/a>"],[100,6,"<a href=\"Trip\/Repository\/Eloquent\/TripRepository.php.html#15\">App\\Trip\\Repository\\Eloquent\\TripRepository<\/a>"],[100,4,"<a href=\"Traits\/UsesUuid.php.html#9\">App\\Traits\\UsesUuid<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Client\/Model\/Client.php.html#9\">App\\Client\\Model\\Client::__construct<\/a>"],[0,1,"<a href=\"Client\/Model\/Client.php.html#13\">App\\Client\\Model\\Client::fromArray<\/a>"],[100,1,"<a href=\"Client\/Model\/Client.php.html#20\">App\\Client\\Model\\Client::getUuid<\/a>"],[100,1,"<a href=\"Client\/Repository\/Eloquent\/Builder\/EloquentToClientModelBuilder.php.html#12\">App\\Client\\Repository\\Eloquent\\Builder\\EloquentToClientModelBuilder::build<\/a>"],[100,1,"<a href=\"Client\/Repository\/Eloquent\/ClientRepository.php.html#15\">App\\Client\\Repository\\Eloquent\\ClientRepository::__construct<\/a>"],[100,1,"<a href=\"Client\/Repository\/Eloquent\/ClientRepository.php.html#22\">App\\Client\\Repository\\Eloquent\\ClientRepository::findByUuid<\/a>"],[0,1,"<a href=\"Client\/Repository\/Eloquent\/ClientRepository.php.html#32\">App\\Client\\Repository\\Eloquent\\ClientRepository::deleteManyByUuid<\/a>"],[0,1,"<a href=\"Client\/Repository\/Eloquent\/Model\/Client.php.html#31\">App\\Client\\Repository\\Eloquent\\Model\\Client::trips<\/a>"],[100,1,"<a href=\"Console\/Kernel.php.html#10\">App\\Console\\Kernel::commands<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#24\">App\\Exceptions\\Handler::register<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Mobile\/ScootersListingController.php.html#17\">App\\Http\\Controllers\\Mobile\\ScootersListingController::__construct<\/a>"],[100,2,"<a href=\"Http\/Controllers\/Mobile\/ScootersListingController.php.html#21\">App\\Http\\Controllers\\Mobile\\ScootersListingController::__invoke<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Scooter\/Trip\/BeginTripController.php.html#24\">App\\Http\\Controllers\\Scooter\\Trip\\BeginTripController::__construct<\/a>"],[66.66666666666666,5,"<a href=\"Http\/Controllers\/Scooter\/Trip\/BeginTripController.php.html#31\">App\\Http\\Controllers\\Scooter\\Trip\\BeginTripController::__invoke<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Scooter\/Trip\/EndTripController.php.html#22\">App\\Http\\Controllers\\Scooter\\Trip\\EndTripController::__construct<\/a>"],[55.00000000000001,4,"<a href=\"Http\/Controllers\/Scooter\/Trip\/EndTripController.php.html#28\">App\\Http\\Controllers\\Scooter\\Trip\\EndTripController::__invoke<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Scooter\/Trip\/UpdateTripController.php.html#19\">App\\Http\\Controllers\\Scooter\\Trip\\UpdateTripController::__construct<\/a>"],[100,2,"<a href=\"Http\/Controllers\/Scooter\/Trip\/UpdateTripController.php.html#23\">App\\Http\\Controllers\\Scooter\\Trip\\UpdateTripController::__invoke<\/a>"],[75,2,"<a href=\"Http\/Middleware\/ApiKeyMiddleware.php.html#14\">App\\Http\\Middleware\\ApiKeyMiddleware::handle<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#14\">App\\Http\\Middleware\\TrustHosts::hosts<\/a>"],[100,1,"<a href=\"Http\/Request\/Mobile\/ListScootersRequest.php.html#21\">App\\Http\\Request\\Mobile\\ListScootersRequest::rules<\/a>"],[100,1,"<a href=\"Http\/Request\/Mobile\/ListScootersRequest.php.html#32\">App\\Http\\Request\\Mobile\\ListScootersRequest::getFirstPoint<\/a>"],[100,1,"<a href=\"Http\/Request\/Mobile\/ListScootersRequest.php.html#40\">App\\Http\\Request\\Mobile\\ListScootersRequest::getSecondPoint<\/a>"],[100,2,"<a href=\"Http\/Request\/Mobile\/ListScootersRequest.php.html#48\">App\\Http\\Request\\Mobile\\ListScootersRequest::getState<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/BeginTripRequest.php.html#15\">App\\Http\\Request\\Scooter\\Trip\\BeginTripRequest::rules<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/BeginTripRequest.php.html#25\">App\\Http\\Request\\Scooter\\Trip\\BeginTripRequest::getScooterUuid<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/BeginTripRequest.php.html#30\">App\\Http\\Request\\Scooter\\Trip\\BeginTripRequest::getClientUuid<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/BeginTripRequest.php.html#35\">App\\Http\\Request\\Scooter\\Trip\\BeginTripRequest::getStartingCoordinates<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/EndTripRequest.php.html#15\">App\\Http\\Request\\Scooter\\Trip\\EndTripRequest::rules<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/EndTripRequest.php.html#24\">App\\Http\\Request\\Scooter\\Trip\\EndTripRequest::getScooterUuid<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/EndTripRequest.php.html#29\">App\\Http\\Request\\Scooter\\Trip\\EndTripRequest::getParkedCoordinates<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/UpdateTripRequest.php.html#15\">App\\Http\\Request\\Scooter\\Trip\\UpdateTripRequest::rules<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/UpdateTripRequest.php.html#24\">App\\Http\\Request\\Scooter\\Trip\\UpdateTripRequest::getScooterUuid<\/a>"],[100,1,"<a href=\"Http\/Request\/Scooter\/Trip\/UpdateTripRequest.php.html#29\">App\\Http\\Request\\Scooter\\Trip\\UpdateTripRequest::getUpdatedCoordinates<\/a>"],[100,1,"<a href=\"Http\/Resources\/ScooterResource.php.html#19\">App\\Http\\Resources\\ScooterResource::toArray<\/a>"],[100,1,"<a href=\"Location\/Dto\/Coordinate.php.html#11\">App\\Location\\Dto\\Coordinate::__construct<\/a>"],[0,1,"<a href=\"Location\/Dto\/Coordinate.php.html#15\">App\\Location\\Dto\\Coordinate::jsonSerialize<\/a>"],[100,1,"<a href=\"Location\/Dto\/Coordinate.php.html#20\">App\\Location\\Dto\\Coordinate::__toString<\/a>"],[100,1,"<a href=\"Location\/Dto\/Coordinates.php.html#11\">App\\Location\\Dto\\Coordinates::__construct<\/a>"],[0,1,"<a href=\"Location\/Dto\/Coordinates.php.html#17\">App\\Location\\Dto\\Coordinates::fromArray<\/a>"],[100,1,"<a href=\"Location\/Dto\/Coordinates.php.html#25\">App\\Location\\Dto\\Coordinates::toArray<\/a>"],[100,1,"<a href=\"Location\/Dto\/LocationBounds.php.html#9\">App\\Location\\Dto\\LocationBounds::__construct<\/a>"],[100,1,"<a href=\"Location\/Dto\/RectangleCoordinates.php.html#9\">App\\Location\\Dto\\RectangleCoordinates::__construct<\/a>"],[100,1,"<a href=\"Location\/Resolver\/BoundingCoordinatesResolver.php.html#12\">App\\Location\\Resolver\\BoundingCoordinatesResolver::resolve<\/a>"],[100,2,"<a href=\"Providers\/AppServiceProvider.php.html#11\">App\\Providers\\AppServiceProvider::register<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#22\">App\\Providers\\AuthServiceProvider::boot<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#13\">App\\Providers\\BroadcastServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/Client\/ClientRepositoryProvider.php.html#13\">App\\Providers\\Client\\ClientRepositoryProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#51\">App\\Providers\\EventServiceProvider::shouldDiscoverEvents<\/a>"],[25,1,"<a href=\"Providers\/RouteServiceProvider.php.html#12\">App\\Providers\\RouteServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/Scooter\/ScooterListenersProvider.php.html#13\">App\\Providers\\Scooter\\ScooterListenersProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/Scooter\/ScooterRepositoryProvider.php.html#13\">App\\Providers\\Scooter\\ScooterRepositoryProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/Scooter\/ScooterStateValidatorsProvider.php.html#14\">App\\Providers\\Scooter\\ScooterStateValidatorsProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/ScooterLocation\/ScooterLocationRepositoryProvider.php.html#13\">App\\Providers\\ScooterLocation\\ScooterLocationRepositoryProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/Trip\/TripRepositoryProvider.php.html#13\">App\\Providers\\Trip\\TripRepositoryProvider::boot<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/CheckReadinessToStart.php.html#12\">App\\Scooter\\Listener\\CheckReadinessToStart::__construct<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/CheckReadinessToStart.php.html#16\">App\\Scooter\\Listener\\CheckReadinessToStart::handle<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/CheckReadinessToStop.php.html#12\">App\\Scooter\\Listener\\CheckReadinessToStop::__construct<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/CheckReadinessToStop.php.html#16\">App\\Scooter\\Listener\\CheckReadinessToStop::handle<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/MarkScooterAsAvailable.php.html#13\">App\\Scooter\\Listener\\MarkScooterAsAvailable::__construct<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/MarkScooterAsAvailable.php.html#17\">App\\Scooter\\Listener\\MarkScooterAsAvailable::handle<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/MarkScooterAsOccupied.php.html#13\">App\\Scooter\\Listener\\MarkScooterAsOccupied::__construct<\/a>"],[100,1,"<a href=\"Scooter\/Listener\/MarkScooterAsOccupied.php.html#17\">App\\Scooter\\Listener\\MarkScooterAsOccupied::handle<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#14\">App\\Scooter\\Model\\Scooter::__construct<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#22\">App\\Scooter\\Model\\Scooter::fromArray<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#32\">App\\Scooter\\Model\\Scooter::getUuid<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#37\">App\\Scooter\\Model\\Scooter::updateState<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#42\">App\\Scooter\\Model\\Scooter::getState<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#47\">App\\Scooter\\Model\\Scooter::getCoordinates<\/a>"],[0,1,"<a href=\"Scooter\/Model\/Scooter.php.html#52\">App\\Scooter\\Model\\Scooter::setCoordinates<\/a>"],[100,1,"<a href=\"Scooter\/Model\/Scooter.php.html#58\">App\\Scooter\\Model\\Scooter::toArray<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/EloquentToScooterModelBuilder.php.html#13\">App\\Scooter\\Repository\\Eloquent\\Builder\\EloquentToScooterModelBuilder::build<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/MultipleEloquentModelToScooterBuilder.php.html#12\">App\\Scooter\\Repository\\Eloquent\\Builder\\MultipleEloquentModelToScooterBuilder::__construct<\/a>"],[100,2,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/MultipleEloquentModelToScooterBuilder.php.html#20\">App\\Scooter\\Repository\\Eloquent\\Builder\\MultipleEloquentModelToScooterBuilder::build<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/Builder\/ScooterToEloquentModelBuilder.php.html#12\">App\\Scooter\\Repository\\Eloquent\\Builder\\ScooterToEloquentModelBuilder::build<\/a>"],[0,1,"<a href=\"Scooter\/Repository\/Eloquent\/Model\/Scooter.php.html#44\">App\\Scooter\\Repository\\Eloquent\\Model\\Scooter::trips<\/a>"],[0,1,"<a href=\"Scooter\/Repository\/Eloquent\/Model\/Scooter.php.html#49\">App\\Scooter\\Repository\\Eloquent\\Model\\Scooter::locationHistory<\/a>"],[0,1,"<a href=\"Scooter\/Repository\/Eloquent\/Model\/Scooter.php.html#54\">App\\Scooter\\Repository\\Eloquent\\Model\\Scooter::currentLocation<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#22\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::__construct<\/a>"],[0,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#33\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::findByUuid<\/a>"],[0,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#40\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::findManyByUuid<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#50\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::findByUuidAndLock<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#61\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::searchWithinCoordinates<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#72\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::searchByStateWithinCoordinates<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#86\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::update<\/a>"],[66.66666666666666,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#93\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::findEloquentModelByUuid<\/a>"],[100,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#100\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::buildSearchWithinCoordinatesQuery<\/a>"],[0,1,"<a href=\"Scooter\/Repository\/Eloquent\/ScooterRepository.php.html#111\">App\\Scooter\\Repository\\Eloquent\\ScooterRepository::deleteManyByUuid<\/a>"],[100,2,"<a href=\"Scooter\/State\/Validator\/IsAvailableValidator.php.html#16\">App\\Scooter\\State\\Validator\\IsAvailableValidator::validate<\/a>"],[100,2,"<a href=\"Scooter\/State\/Validator\/IsOccupiedValidator.php.html#16\">App\\Scooter\\State\\Validator\\IsOccupiedValidator::validate<\/a>"],[100,1,"<a href=\"Scooter\/State\/Validator\/StateChangeValidationManager.php.html#14\">App\\Scooter\\State\\Validator\\StateChangeValidationManager::__construct<\/a>"],[100,2,"<a href=\"Scooter\/State\/Validator\/StateChangeValidationManager.php.html#18\">App\\Scooter\\State\\Validator\\StateChangeValidationManager::check<\/a>"],[100,1,"<a href=\"ScooterLocation\/Listener\/CreateScooterLocation.php.html#14\">App\\ScooterLocation\\Listener\\CreateScooterLocation::__construct<\/a>"],[100,1,"<a href=\"ScooterLocation\/Listener\/CreateScooterLocation.php.html#18\">App\\ScooterLocation\\Listener\\CreateScooterLocation::handle<\/a>"],[100,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#13\">App\\ScooterLocation\\Model\\ScooterLocation::__construct<\/a>"],[0,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#21\">App\\ScooterLocation\\Model\\ScooterLocation::fromArray<\/a>"],[100,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#31\">App\\ScooterLocation\\Model\\ScooterLocation::setUuid<\/a>"],[100,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#36\">App\\ScooterLocation\\Model\\ScooterLocation::getUuid<\/a>"],[100,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#41\">App\\ScooterLocation\\Model\\ScooterLocation::getTrip<\/a>"],[100,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#46\">App\\ScooterLocation\\Model\\ScooterLocation::getCoordinates<\/a>"],[100,1,"<a href=\"ScooterLocation\/Model\/ScooterLocation.php.html#51\">App\\ScooterLocation\\Model\\ScooterLocation::getReceivedAt<\/a>"],[100,1,"<a href=\"ScooterLocation\/Repository\/Eloquent\/Builder\/ScooterLocationToEloquentModelBuilder.php.html#12\">App\\ScooterLocation\\Repository\\Eloquent\\Builder\\ScooterLocationToEloquentModelBuilder::build<\/a>"],[0,1,"<a href=\"ScooterLocation\/Repository\/Eloquent\/Model\/ScooterLocation.php.html#51\">App\\ScooterLocation\\Repository\\Eloquent\\Model\\ScooterLocation::scooter<\/a>"],[0,1,"<a href=\"ScooterLocation\/Repository\/Eloquent\/Model\/ScooterLocation.php.html#56\">App\\ScooterLocation\\Repository\\Eloquent\\Model\\ScooterLocation::trip<\/a>"],[100,1,"<a href=\"ScooterLocation\/Repository\/Eloquent\/ScooterLocationRepository.php.html#13\">App\\ScooterLocation\\Repository\\Eloquent\\ScooterLocationRepository::__construct<\/a>"],[100,1,"<a href=\"ScooterLocation\/Repository\/Eloquent\/ScooterLocationRepository.php.html#17\">App\\ScooterLocation\\Repository\\Eloquent\\ScooterLocationRepository::create<\/a>"],[50,2,"<a href=\"ScooterLocation\/Rule\/ValidLatitude.php.html#16\">App\\ScooterLocation\\Rule\\ValidLatitude::validate<\/a>"],[50,2,"<a href=\"ScooterLocation\/Rule\/ValidLongitude.php.html#16\">App\\ScooterLocation\\Rule\\ValidLongitude::validate<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnded.php.html#16\">App\\Trip\\Event\\TripEnded::__construct<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnded.php.html#23\">App\\Trip\\Event\\TripEnded::getTrip<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnded.php.html#28\">App\\Trip\\Event\\TripEnded::getCoordinates<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnded.php.html#33\">App\\Trip\\Event\\TripEnded::getTimestamp<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnding.php.html#17\">App\\Trip\\Event\\TripEnding::__construct<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnding.php.html#24\">App\\Trip\\Event\\TripEnding::getTrip<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnding.php.html#29\">App\\Trip\\Event\\TripEnding::getLocation<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnding.php.html#34\">App\\Trip\\Event\\TripEnding::getTimestamp<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripEnding.php.html#39\">App\\Trip\\Event\\TripEnding::getScooter<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarted.php.html#16\">App\\Trip\\Event\\TripStarted::__construct<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarted.php.html#23\">App\\Trip\\Event\\TripStarted::getTrip<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarted.php.html#28\">App\\Trip\\Event\\TripStarted::getCoordinates<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarted.php.html#33\">App\\Trip\\Event\\TripStarted::getTimestamp<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarting.php.html#17\">App\\Trip\\Event\\TripStarting::__construct<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarting.php.html#25\">App\\Trip\\Event\\TripStarting::getScooter<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarting.php.html#30\">App\\Trip\\Event\\TripStarting::getClient<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarting.php.html#35\">App\\Trip\\Event\\TripStarting::getCoordinates<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripStarting.php.html#40\">App\\Trip\\Event\\TripStarting::getTimestamp<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripUpdated.php.html#16\">App\\Trip\\Event\\TripUpdated::__construct<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripUpdated.php.html#23\">App\\Trip\\Event\\TripUpdated::getTrip<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripUpdated.php.html#28\">App\\Trip\\Event\\TripUpdated::getCoordinates<\/a>"],[100,1,"<a href=\"Trip\/Event\/TripUpdated.php.html#33\">App\\Trip\\Event\\TripUpdated::getTimestamp<\/a>"],[100,1,"<a href=\"Trip\/Listener\/EndTrip.php.html#13\">App\\Trip\\Listener\\EndTrip::__construct<\/a>"],[100,1,"<a href=\"Trip\/Listener\/EndTrip.php.html#17\">App\\Trip\\Listener\\EndTrip::handle<\/a>"],[100,1,"<a href=\"Trip\/Listener\/StartTrip.php.html#14\">App\\Trip\\Listener\\StartTrip::__construct<\/a>"],[100,1,"<a href=\"Trip\/Listener\/StartTrip.php.html#18\">App\\Trip\\Listener\\StartTrip::handle<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#13\">App\\Trip\\Model\\Trip::__construct<\/a>"],[0,1,"<a href=\"Trip\/Model\/Trip.php.html#22\">App\\Trip\\Model\\Trip::fromArray<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#33\">App\\Trip\\Model\\Trip::setUuid<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#38\">App\\Trip\\Model\\Trip::getUuid<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#43\">App\\Trip\\Model\\Trip::getScooter<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#48\">App\\Trip\\Model\\Trip::getClient<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#53\">App\\Trip\\Model\\Trip::getStartTime<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#58\">App\\Trip\\Model\\Trip::setEndTime<\/a>"],[100,1,"<a href=\"Trip\/Model\/Trip.php.html#63\">App\\Trip\\Model\\Trip::getEndTime<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/Builder\/EloquentToTripModelBuilder.php.html#14\">App\\Trip\\Repository\\Eloquent\\Builder\\EloquentToTripModelBuilder::__construct<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/Builder\/EloquentToTripModelBuilder.php.html#20\">App\\Trip\\Repository\\Eloquent\\Builder\\EloquentToTripModelBuilder::build<\/a>"],[100,2,"<a href=\"Trip\/Repository\/Eloquent\/Builder\/TripToEloquentModelBuilder.php.html#12\">App\\Trip\\Repository\\Eloquent\\Builder\\TripToEloquentModelBuilder::build<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/Model\/Trip.php.html#46\">App\\Trip\\Repository\\Eloquent\\Model\\Trip::scooter<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/Model\/Trip.php.html#51\">App\\Trip\\Repository\\Eloquent\\Model\\Trip::client<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/TripRepository.php.html#17\">App\\Trip\\Repository\\Eloquent\\TripRepository::__construct<\/a>"],[100,2,"<a href=\"Trip\/Repository\/Eloquent\/TripRepository.php.html#26\">App\\Trip\\Repository\\Eloquent\\TripRepository::findOngoingForScooter<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/TripRepository.php.html#41\">App\\Trip\\Repository\\Eloquent\\TripRepository::create<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/TripRepository.php.html#49\">App\\Trip\\Repository\\Eloquent\\TripRepository::update<\/a>"],[100,1,"<a href=\"Trip\/Repository\/Eloquent\/TripRepository.php.html#56\">App\\Trip\\Repository\\Eloquent\\TripRepository::findEloquentModelByUuid<\/a>"],[100,2,"<a href=\"Traits\/UsesUuid.php.html#11\">App\\Traits\\UsesUuid::boot<\/a>"],[100,1,"<a href=\"Traits\/UsesUuid.php.html#21\">App\\Traits\\UsesUuid::getIncrementing<\/a>"],[100,1,"<a href=\"Traits\/UsesUuid.php.html#26\">App\\Traits\\UsesUuid::getKeyType<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

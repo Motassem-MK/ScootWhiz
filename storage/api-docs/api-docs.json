@@ -1,0 +1,460 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Scootin-About API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/mobile/scooters": {
+            "post": {
+                "tags": [
+                    "Mobile"
+                ],
+                "summary": "List scooters filtered by location & state",
+                "operationId": "8d1241811ef868a8332a0ad9db1ae4f2",
+                "parameters": [
+                    {
+                        "name": "content-type",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "apikey",
+                        "in": "header",
+                        "required": true,
+                        "example": "abc123"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "lat1",
+                                    "long1",
+                                    "lat2",
+                                    "long2"
+                                ],
+                                "properties": {
+                                    "lat1": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "-15.323334"
+                                    },
+                                    "long1": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "88.422053"
+                                    },
+                                    "lat2": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "-15.323400"
+                                    },
+                                    "long2": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "88.422350"
+                                    },
+                                    "state": {
+                                        "type": "string",
+                                        "enum": [
+                                            "available",
+                                            "occupied"
+                                        ],
+                                        "example": "available"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "uuid": {
+                                                        "type": "string",
+                                                        "format": "uuid",
+                                                        "example": "31878b1f-d6bd-3058-a4bd-76e68b81fc11"
+                                                    },
+                                                    "state": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "available",
+                                                            "occupied"
+                                                        ],
+                                                        "example": "available"
+                                                    },
+                                                    "coordinates": {
+                                                        "properties": {
+                                                            "latitude": {
+                                                                "type": "number",
+                                                                "format": "float",
+                                                                "example": "-15.323385"
+                                                            },
+                                                            "longitude": {
+                                                                "type": "number",
+                                                                "format": "float",
+                                                                "example": "88.422120"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error401"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/scooter/trip/begin": {
+            "post": {
+                "tags": [
+                    "Scooter"
+                ],
+                "summary": "Start trip",
+                "operationId": "f8e1544e8225b90e66c5d6ee79a71d9c",
+                "parameters": [
+                    {
+                        "name": "content-type",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "apikey",
+                        "in": "header",
+                        "required": true,
+                        "example": "abc123"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "scooter_uuid",
+                                    "client_uuid",
+                                    "lat",
+                                    "long"
+                                ],
+                                "properties": {
+                                    "scooter_uuid": {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "example": "25e4f3b6-23d7-3abb-8ec5-8739d2299e0c"
+                                    },
+                                    "client_uuid": {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "example": "25e4f3b6-23d7-3abb-8ec5-8739d2299e0c"
+                                    },
+                                    "lat": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "-15.323400"
+                                    },
+                                    "long": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "88.422053"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "422": {
+                        "description": "Unprocessable entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error422"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error401"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/scooter/trip/end": {
+            "post": {
+                "tags": [
+                    "Scooter"
+                ],
+                "summary": "End trip",
+                "operationId": "01f43ccea737c20fa0f4254fd5fb68ec",
+                "parameters": [
+                    {
+                        "name": "content-type",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "apikey",
+                        "in": "header",
+                        "required": true,
+                        "example": "abc123"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "scooter_uuid",
+                                    "lat",
+                                    "long"
+                                ],
+                                "properties": {
+                                    "scooter_uuid": {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "example": "25e4f3b6-23d7-3abb-8ec5-8739d2299e0c"
+                                    },
+                                    "lat": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "-15.323400"
+                                    },
+                                    "long": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "88.422053"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "422": {
+                        "description": "Unprocessable entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error422"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error401"
+                                }
+                            }
+                        }
+                    },
+                    "409": {
+                        "description": "A conflict occurred while processing the request"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/scooter/trip/update": {
+            "post": {
+                "tags": [
+                    "Scooter"
+                ],
+                "summary": "Update trip",
+                "operationId": "ef4bb7a2ec13fec6c31866d4e5136872",
+                "parameters": [
+                    {
+                        "name": "content-type",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "accept",
+                        "in": "header",
+                        "required": true,
+                        "example": "application/json"
+                    },
+                    {
+                        "name": "apikey",
+                        "in": "header",
+                        "required": true,
+                        "example": "abc123"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "scooter_uuid",
+                                    "lat",
+                                    "long"
+                                ],
+                                "properties": {
+                                    "scooter_uuid": {
+                                        "type": "string",
+                                        "format": "uuid",
+                                        "example": "25e4f3b6-23d7-3abb-8ec5-8739d2299e0c"
+                                    },
+                                    "lat": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "-15.323400"
+                                    },
+                                    "long": {
+                                        "type": "number",
+                                        "format": "float",
+                                        "example": "88.422053"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "422": {
+                        "description": "Unprocessable entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error422"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error401"
+                                }
+                            }
+                        }
+                    },
+                    "409": {
+                        "description": "A conflict occurred while processing the request"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Error422": {
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "The selected output.format is invalid. (and 1 more error)"
+                    },
+                    "errors": {
+                        "properties": {
+                            "output.x": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "example": "The output.x name field is required."
+                                }
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "Error401": {
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "Unauthenticated."
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
